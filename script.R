@@ -13,8 +13,11 @@ library(lubridate)
 # setwd("~/Documents/exploratory_analysis_w1p1/")
 
 # Loading the data
-# the data file must be contained in a directory named 'data' under the current working directory
-df <- read_delim("./data/household_power_consumption.txt",
+
+# *************************************************************************
+# please make sure the data file is placed in the current working directory
+# *************************************************************************
+df <- read_delim("./household_power_consumption.txt",
                  col_types = "ccddddddn",na = c("?",""))
 
 head(df, 3)
