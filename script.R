@@ -17,12 +17,6 @@ library(lubridate)
 df <- read_delim("./data/household_power_consumption.txt",
                  col_types = "ccddddddn",na = c("?",""))
 
-
-df$Date[10]
-strptime(df$Time[1], format = "%H:%M:%S")
-df %>% mutate(Date = as.Date)
-sapply(df$Date, as.Date, "%d/%M/%Y")
-
 head(df, 3)
 nrow(df); ncol(df)
 str(df)
